@@ -19,4 +19,5 @@ Answers
 
 25. No, nothing is printed if no file names match the search string.
 
-    
+26. Yes, by using a boolean flag to check if any match was found, if not than print a message after the loop.
+   

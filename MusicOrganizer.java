@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * A class to hold details of audio files.
@@ -107,13 +108,27 @@ public class MusicOrganizer
             player.playSample(filename);
         }
     }
+    
+    public void playSamplesByArtist(String artist) {
+        for (String filename : files) {
+            if (filename.contains(artist)) {
+            player.playSample(filename);
+            } 
+        }
+    }
+
 
     public void listMatching(String searchString) 
     {
+        boolean found = false;
         for (String filename : files) {
             if (filename.contains(searchString)) {
             System.out.println(filename);
+            found = true;
             }
+        }
+        if (!found) {
+            System.out.println("No files matched found.");
         }
     }
 
