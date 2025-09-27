@@ -55,10 +55,12 @@ public class MusicOrganizer
     /**
      * Show a list of all the files in the collection.
      */
-    public void listAllFiles()
+    public void listWithIndex()
     {
+        int position = 0;
         for(String filename : files) {
-            System.out.println(filename);
+            System.out.println(position + ": " + filename);
+            position++;
         }
     }
     
@@ -106,6 +108,15 @@ public class MusicOrganizer
         }
     }
 
+    public void listMatching(String searchString) 
+    {
+        for (String filename : files) {
+            if (filename.contains(searchString)) {
+            System.out.println(filename);
+            }
+        }
+    }
+
     /**
      * Determine whether the given index is valid for the collection.
      * Print an error message if it is not.
@@ -130,5 +141,6 @@ public class MusicOrganizer
             valid = true;
         }
         return valid;
-    }
+ 
+        }
 }

@@ -17,4 +17,6 @@ method prints a list of the collection.
 
 Answers
 
- 
+25. No, nothing is printed if no file names match the search string.
+
+    
